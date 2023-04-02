@@ -12,3 +12,10 @@
 # below:
 .git
 .gitignore
+
+# Node.js dependencies:
+node_modules/*
+!node_modules/.geo
+
+node_modules/.geo/*
+!node_modules/.geo/GeoLite2-Country.mmdb
