@@ -3,4 +3,4 @@ runtime: nodejs18
 env_variables:
   PORT: 8080
 
-entrypoint: npm start-env
+entrypoint: npm run start-env
