@@ -17,6 +17,7 @@
 /build
 /public/umami.js
 /public/geo
+GeoLite2-Country.mmdb
 
 # misc
 .DS_Store

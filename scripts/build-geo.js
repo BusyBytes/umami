@@ -14,7 +14,7 @@ if (process.env.MAXMIND_LICENSE_KEY) {
     `?edition_id=GeoLite2-Country&license_key=${process.env.MAXMIND_LICENSE_KEY}&suffix=tar.gz`;
 }
 
-const dest = path.resolve(__dirname, '../node_modules/.geo');
+const dest = path.resolve(__dirname, '..');
 
 if (!fs.existsSync(dest)) {
   fs.mkdirSync(dest);
@@ -34,8 +34,6 @@ download(url).then(
         if (entry.path.endsWith('.mmdb')) {
           const filename = path.join(dest, path.basename(entry.path));
           entry.pipe(fs.createWriteStream(filename));
-
-          console.log('Saved geo database:', filename);
         }
       });
 
